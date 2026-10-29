@@ -52,12 +52,7 @@ body:not(.s1) .seal{animation:pl 1.8s ease-in-out infinite}
 .s4 .cover{transform:rotateY(-180deg)}
 .cf,.cb{backface-visibility:hidden;-webkit-backface-visibility:hidden}
 .cb{transform:rotateY(180deg)}
-.cf{background:#9b0f1e;box-shadow:0 1.4em 3em rgba(60,10,16,.35);display:flex;flex-direction:column;align-items:center;justify-content:space-between;padding:7.5em 0;box-sizing:border-box}
-.cf::before{content:'';position:absolute;inset:3em;border:.6em double #d9a441}
-.cf h1{margin:0;font-weight:400;font-size:7.2em;line-height:1.1;color:#f0cf7a}
-.win{width:36em;height:38em;box-sizing:border-box;border:1.2em double #d9a441;background:#ecdca6 repeating-linear-gradient(100deg,rgba(255,255,255,.3) 0 .8em,rgba(170,130,50,.14) .8em 1.7em);display:grid;place-items:center;color:#b8862b}
-.win svg{width:20em;height:15em}
-.cf p{margin:0;padding:0 6em;text-align:center;font-family:'Imperial Script', cursive;font-size:7.5em;line-height:1.05;color:#f6ead2}
+.cf{background:#9b0f1e url('cover.jpeg') center/cover no-repeat;box-shadow:0 1.4em 3em rgba(60,10,16,.35)}
 .leaf{position:absolute;left:18em;top:33em;width:64em;height:84em;border-radius:.8em;background:#a3121f;box-shadow:0 1em 2.4em rgba(40,6,10,.4);opacity:0;transform:translate(23.7em,10em) scale(.74);transition:transform 1.6s cubic-bezier(.3,.7,.2,1),opacity .6s}
 .leaf::before{content:'';position:absolute;inset:2.2em;border:.5em dotted rgba(255,255,255,.8);border-radius:1.2em}
 .leaf svg{position:absolute;left:50%;top:50%;width:16em;height:12em;margin:-6em 0 0 -8em;color:#f3dcb0}
@@ -124,7 +119,7 @@ body:not(.s1) .seal{animation:pl 1.8s ease-in-out infinite}
 <div class="page"><svg viewBox="0 0 80 60" aria-hidden="type"><use href="#bf"/></svg></div>
 <div class="cover">
 <div class="cb"><svg viewBox="0 0 80 60" aria-hidden="true"><use href="#bf"/></svg></div>
-<div class="cf"><h1 class="bn">শুভ বিবাহ</h1><div class="win"><svg viewBox="0 0 80 60" aria-hidden="true"><use href="#bf"/></svg></div><p>Amritaparna &amp; Subham</p></div>
+<div class="cf"></div>
 </div>
 <button class="hit" id="cbt" type="button" aria-label="Open the card" disabled></button>
 </div>
@@ -176,7 +171,7 @@ var D=document.body,H=document.getElementById('hint'),E=document.getElementById(
 if(innerHeight<480){document.getElementById('note').hidden=false}
 var k=matchMedia('(prefers-reduced-motion: reduce)').matches?0.3:1;
 function show(i){cur=i;RA.inert=i!==0;RB.inert=i!==1;D.classList.toggle('r1',i===1);dots[0].classList.toggle('on',i===0);dots[1].classList.toggle('on',i===1)}
-function go(c,d){setTimeout(function(){D.classList.add(c);if(c==='s6'){R.inert=false;show(0);t3=setTimeout(function(){show(1)},10000)}},d*k)}
+function go(c,d){setTimeout(function(){D.classList.add(c);if(c==='s6'){R.inert=false;show(0);t3=setTimeout(function(){show(1)},10000)}} ,d*k)}
 var t1,t2,t3;
 
 // Audio Controller optimized for mobile
